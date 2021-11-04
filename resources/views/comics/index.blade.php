@@ -15,7 +15,7 @@
                             <th scope="col">Serie</th>
                             <th scope="col">Data di vendita</th>
                             <th scope="col">Genere</th>
-                     
+                            <th scope="col">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,7 +28,11 @@
                                 <td>{{ $comic['series'] }}</td>
                                 <td>{{ $comic['sale_date'] }}</td>
                                 <td>{{ $comic['type'] }}</td>
-                                
+                                <td>
+                                    <a href="{{ route('comics.show', $comic['id']) }}" class="btn btn-info">Dettagli</a>
+                                    <a href="" class="btn btn-warning">Modifica</a>
+                                    <a href="" class="btn btn-danger">Cancella</a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
